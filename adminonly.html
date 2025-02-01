@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸さくら雑談王国🌸 - ログイン</title>
+     <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1E88T907Y4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1E88T907Y4');
+</script>
+</head>
+<body>
+    <div id="login-form">
+        <h1>ログイン</h1>
+        <p>このサイトを表示するにはログインが必要です。</p>
+        <input type="text" id="admin-id" placeholder="管理者ID">
+        <input type="password" id="password" placeholder="パスワード">
+        <button onclick="checkLogin()">ログイン</button>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const adminId = document.getElementById("admin-id").value;
+            const password = document.getElementById("password").value;
+
+            const correctId = "sakurazatudanoukoku";
+            const correctPassword = "sakurasakusaku";
+
+            if (adminId === correctId && password === correctPassword) {
+                // ログイン成功：main.htmlへリダイレクト
+                window.location.href = "main.html";
+            } else {
+                // ログイン失敗
+                alert("IDまたはパスワードが間違っています。");
+            }
+        }
+    </script>
+</body>
+</html>
